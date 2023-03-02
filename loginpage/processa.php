@@ -4,11 +4,13 @@ include_once ("conexão.php");
 
 $nome = filter_input (INPUT_POST, 'nome');
 $email = filter_input (INPUT_POST, 'email' , FILTER_SANITIZE_EMAIL);
+$password = filter_input(INPUT_POST, 'password');
 
-// echo "Nome: $nome <br>" ;
-// echo "E-mail: $email" ;
+// Versão criptografada da senha usando a função password_hash()
+$senha_criptografada = password_hash($password, PASSWORD_DEFAULT);
 
-$result_usuario = "INSERT INTO usuarios (nome, email, created) VALUES ( '$nome', '$email', NOW())";
+
+$result_usuario = "INSERT INTO usuarios (nome, email, password, created) VALUES ( '$nome', '$email', '$senha_criptografada', NOW())";
 $resultado_usuarios = mysqli_query ($conn, $result_usuario);
 
 
@@ -21,3 +23,5 @@ if(mysqli_insert_id($conn)){
     header("Location: index.php");
 
 }
+
+?>
