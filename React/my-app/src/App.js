@@ -1,21 +1,19 @@
 import './App.css';
-import HelloWorld from './components/HelloWorld';
+import Pessoa from './components/Pessoa';
+import img from './assets/meju2.png';
 
 
 function App() {
-  const name = "Vinicius"
+const nome="Vinicius"
 
-  function sum(a, b) {
-    return a + b;
-  }
-
+ 
   return (
   <div className='App'>
-    <h1> Olá react!</h1>
-    <p>Meu primeiro app!</p>
-    <h2>Olá, {name}</h2>
-    <p>Soma: {sum(1,6)}</p>
-    <HelloWorld></HelloWorld>
+    <Pessoa 
+    nome={nome} 
+    idade="27" 
+    profissao="Amor da Ju <3" 
+    foto={img} />
   </div>
   );
 }
