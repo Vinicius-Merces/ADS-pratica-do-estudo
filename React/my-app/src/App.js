@@ -1,6 +1,6 @@
 import './App.css';
-import Pessoa from './components/Pessoa';
-import img from './assets/meju2.png';
+import Evento from './components/Eventos';
+import Form from './components/Form';
 
 
 function App() {
@@ -9,11 +9,10 @@ const nome="Vinicius"
  
   return (
   <div className='App'>
-    <Pessoa 
-    nome={nome} 
-    idade="27" 
-    profissao="Amor da Ju <3" 
-    foto={img} />
+    <h1>Testando Eventos</h1>
+    <Evento numero={"1"}/>
+    <Evento numero={"2"}/>
+    <Form />
   </div>
   );
 }
