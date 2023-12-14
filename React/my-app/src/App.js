@@ -4,8 +4,6 @@ import Form from './components/Form';
 
 
 function App() {
-const nome="Vinicius"
-
  
   return (
   <div className='App'>
