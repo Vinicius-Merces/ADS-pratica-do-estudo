@@ -1,6 +1,5 @@
 import './App.css';
 import Condicional from './components/Condicional';
-import second from './components/Condicional'
 
 
 function App() {
@@ -9,6 +8,7 @@ function App() {
   <div className='App'>
     <h1>Renderização condicional</h1>
     <Condicional/>
+    
   </div>
   );
 }
